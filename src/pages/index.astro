@@ -1,18 +1,12 @@
 ---
 import { getCollection } from 'astro:content';
-
-// Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
 import BaseLayout from '../layouts/BaseLayout.astro';
-
-// Component Imports
 import CallToAction from '../components/CallToAction.astro';
 import Grid from '../components/Grid.astro';
 import Hero from '../components/Hero.astro';
 import Icon from '../components/Icon.astro';
 import Pill from '../components/Pill.astro';
 import PortfolioPreview from '../components/PortfolioPreview.astro';
-
-// Page section components
 import ContactCTA from '../components/ContactCTA.astro';
 import Skills from '../components/Skills.astro';
 
@@ -21,8 +15,23 @@ const projects = (await getCollection('work'))
 	.sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
 	.slice(0, 4);
 
-// Full Astro Component Syntax:
-// https://docs.astro.build/basics/astro-components/
+const education = [
+  { degree: 'AS in Computer Science', institution: 'Indian River State College', year: '2020' },
+  { degree: 'AA in General Education', institution: 'Indian River State College', year: '2019' },
+  { degree: 'BS in UI Experience', institution: 'Western Governor University', year: 'Enrolled' },
+  // Add more education entries as needed
+];
+
+const certifications = [
+  { name: 'AWS Certified Developer', issuer: 'Amazon', year: 2021 },
+  // Add more certifications as needed
+];
+
+const contactInfo = {
+  email: 'jenkinskevin101@gmail.com',
+  linkedin: 'https://linkedin.com/in/jenkinskevin101',
+  github: 'https://github.com/warjinx338',
+};
 ---
 
 <BaseLayout>
@@ -30,22 +39,23 @@ const projects = (await getCollection('work'))
 		<div class="wrapper stack gap-8 lg:gap-20">
 			<header class="hero">
 				<Hero
-					title="Hello, my name is Jeanine White"
-					tagline="I am a Creative Developer who is currently based in Portland, Oregon."
+					title="Hello, my name is Kevin Jenkins"
+					tagline="I am a Support Engineer that aspires to be a UI/UX Engineer."
 					align="start"
 				>
 					<div class="roles">
-						<Pill><Icon icon="code" size="1.33em" /> Developer</Pill>
-						<Pill><Icon icon="microphone-stage" size="1.33em" /> Speaker</Pill>
-						<Pill><Icon icon="pencil-line" size="1.33em" /> Writer</Pill>
+						<Pill><Icon icon="code" size="1.33em" /> Web Designer</Pill>
+						<Pill><Icon icon="microphone-stage" size="1.33em" /> Father</Pill>
+						<Pill><Icon icon="pencil-line" size="1.33em" /> DevOps</Pill>
+						<Pill><Icon icon="pencil-line" size="1.33em" /> AI Enthusiast</Pill>
 					</div>
 				</Hero>
 
 				<img
-					alt="Jeanine White smiling in a red plaid shirt and tortoise shell glasses"
+					alt="Kevin Jenkins smiling next to a statue in Savannah, GA"
 					width="480"
 					height="620"
-					src="/assets/portrait.jpg"
+					src="/assets/DS-Tavern.JPG"
 				/>
 			</header>
 
@@ -79,15 +89,12 @@ const projects = (await getCollection('work'))
 				</div>
 			</section>
 
+			<!-- Add the Bento component here -->
 			<section class="section with-background bg-variant">
 				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Mentions</h3>
-					<p>
-						I have been fortunate enough to receive praise for my work in several publications. Take
-						a look below to learn more.
-					</p>
+					<h3>About Me</h3>
+					<p>Here's a quick overview of my skills, education, certifications, and contact information.</p>
 				</header>
-
 				<div class="gallery">
 					<Grid variant="small">
 						{
@@ -99,7 +106,10 @@ const projects = (await getCollection('work'))
 						}
 					</Grid>
 				</div>
+					<!-- Remove the Bento component usage -->
 			</section>
+
+			<!-- You can remove or keep the Mentions section as needed -->
 		</main>
 
 		<ContactCTA />
@@ -248,5 +258,27 @@ const projects = (await getCollection('work'))
 			border-radius: 1.5rem;
 			height: 9.5rem;
 		}
+	}
+
+	.width-full {
+		width: 100%;
+	}
+</style>
+
+<style>
+	.width-full {
+		width: 100vw;
+		position: relative;
+		left: 50%;
+		right: 50%;
+		margin-left: -50vw;
+		margin-right: -50vw;
+	}
+</style>
+
+<style>
+	.about-me-section {
+		width: 100%;
+		overflow: hidden; /* This ensures no horizontal scrollbar appears */
 	}
 </style>

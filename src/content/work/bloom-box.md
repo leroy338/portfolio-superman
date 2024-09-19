@@ -1,8 +1,8 @@
 ---
-title: Bloom Box
+title: F Your Bundt
 publishDate: 2019-12-01 00:00:00
-img: /assets/stock-2.jpg
-img_alt: A bright pink sheet of paper used to wrap flowers curves in front of rich blue background
+img: /assets/F-Your-Bundt.png
+img_alt: A nice tasy looking cake with some profanity
 description: |
   We paired with a cutting-edge music API and a team of horticulturalists
   to build AI-generated playlists that maximize houseplant health.

@@ -1,4 +1,12 @@
-<div class="pill"><slot /></div>
+---
+export interface Props {
+	variant?: 'default' | 'title';
+}
+
+const { variant = 'default' } = Astro.props;
+---
+
+<div class={`pill ${variant}`}><slot /></div>
 
 <style>
 	.pill {
@@ -12,5 +20,12 @@
 		font-size: var(--text-md);
 		line-height: 1.35;
 		white-space: nowrap;
+	}
+
+	.pill.title {
+		background-color: rgba(0, 0, 0, 0.5); /* Transparent with 50% opacity */
+		backdrop-filter: blur(10px); /* Blurred background */
+		border: none; /* Remove border */
+		color: var(--gray-0); /* Adjust text color if needed */
 	}
 </style>

@@ -1,0 +1,20 @@
+---
+const { children } = Astro.props;
+---
+
+<div class="container">
+  {children}
+</div>
+
+<style>
+  .container {
+    width: 100%;
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: transparent; /* Set background to transparent */
+  }
+</style>

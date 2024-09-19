@@ -1,6 +1,7 @@
 ---
 import Icon from './Icon.astro';
 import ThemeToggle from './ThemeToggle.astro';
+import Pill from './Pill.astro';
 import type { iconPaths } from './IconPaths';
 
 /** Main menu items */
@@ -12,21 +13,21 @@ const textLinks: { label: string; href: string }[] = [
 
 /** Icon links to social media — edit these with links to your profiles! */
 const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[] = [
-	{ label: 'Twitter', href: 'https://twitter.com/me', icon: 'twitter-logo' },
-	{ label: 'Twitch', href: 'https://twitch.tv/me', icon: 'twitch-logo' },
-	{ label: 'GitHub', href: 'https://github.com/me', icon: 'github-logo' },
+	{ label: 'Twitter', href: 'https://twitter.com/warjinx338', icon: 'twitter-logo' },
+	{ label: 'GitHub', href: 'https://github.com/warjinx338', icon: 'github-logo' },
 	{ label: 'CodePen', href: 'https://codepen.io/me', icon: 'codepen-logo' },
-	{ label: 'dribbble', href: 'https://dribbble.com/me', icon: 'dribbble-logo' },
-	{ label: 'YouTube', href: 'https://www.youtube.com/@me/', icon: 'youtube-logo' },
+	{ label: 'LinkedIn', href: 'https://linkedin.com/in/jenkinskevin101', icon: 'linkedin-logo' },
 ];
 ---
 
 <nav>
 	<div class="menu-header">
-		<a href="/" class="site-title">
-			<Icon icon="terminal-window" color="var(--accent-regular)" size="1.6em" gradient />
-			Jeanine White
-		</a>
+		<Pill variant="title">
+			<a href="/" class="site-title">
+				<Icon icon="superman" color="var(--accent-regular)" size="1.6em" gradient />
+				Kevin Jenkins
+			</a>
+		</Pill>
 		<menu-button>
 			<template>
 				<button class="menu-button" aria-expanded="false">
@@ -176,6 +177,14 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 		line-height: 1.1;
 		color: var(--gray-0);
 		text-decoration: none;
+		border-radius: 0.5rem;
+	}
+
+	@media (max-width: 50em) {
+		:root:not(.theme-dark) .site-title-pill {
+			background-color: rgba(75, 0, 130, 0.5); /* Dark purple with 50% opacity */
+			backdrop-filter: blur(10px); /* Blurred background */
+		}
 	}
 
 	.menu-button {
@@ -359,6 +368,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 			gap: 0;
 		}
 	}
+
 	@media (forced-colors: active) {
 		.link.active {
 			color: SelectedItem;
