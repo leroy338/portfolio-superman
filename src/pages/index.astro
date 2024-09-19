@@ -23,7 +23,11 @@ const education = [
 ];
 
 const certifications = [
-  { name: 'AWS Certified Developer', issuer: 'Amazon', year: 2021 },
+{ name: 'Service Hub', issuer: 'Hubspot', year: 2022 },
+  { name: 'Marketing Hub', issuer: 'Hubspot', year: 2023 },
+  { name: 'Sales Hub', issuer: 'Hubspot', year: 2023 },
+  { name: 'Inbound Methodology', issuer: 'Hubspot', year: 2023 },
+  { name: 'RevOps', issuer: 'Hubspot', year: 2024 },
   // Add more certifications as needed
 ];
 
@@ -56,6 +60,7 @@ const contactInfo = {
 					width="480"
 					height="620"
 					src="/assets/DS-Tavern.JPG"
+					class="hero-image"
 				/>
 			</header>
 
@@ -167,6 +172,13 @@ const contactInfo = {
 			aspect-ratio: 3 / 4;
 			border-radius: 4.5rem;
 			object-fit: cover;
+		}
+	}
+
+	@media (max-width: 50em) {
+		.hero img {
+			height: 80vh; /* Make the image take 80% of the viewport height */
+			width: auto; /* Maintain aspect ratio */
 		}
 	}
 
