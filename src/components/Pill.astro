@@ -28,4 +28,10 @@ const { variant = 'default' } = Astro.props;
 		border: none; /* Remove border */
 		color: var(--gray-0); /* Adjust text color if needed */
 	}
+
+	@media (max-width: 600px) {
+		.pill.title {
+			color: #ffffff; /* White text color for mobile view in light mode */
+		}
+	}
 </style>

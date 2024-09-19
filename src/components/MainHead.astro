@@ -45,3 +45,16 @@ const {
 		observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
 	}
 </script>
+
+<style>
+	/* Apply noise.png background to the head section */
+	:root {
+		--noise-bg: url('/assets/backgrounds/noise.png');
+	}
+
+	@media (max-width: 50em) {
+		html {
+			background: var(--noise-bg) top center/220px repeat;
+		}
+	}
+</style>
