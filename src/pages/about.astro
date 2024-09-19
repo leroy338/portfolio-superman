@@ -5,17 +5,17 @@ import ContactCTA from '../components/ContactCTA.astro';
 import Hero from '../components/Hero.astro';
 ---
 
-<BaseLayout title="About | Jeanine White" description="About Jeanine White Lorem Ipsum">
+<BaseLayout title="About | Kevin Jenkins" description=" kj-designz.com portfolio about">
 	<div class="stack gap-20">
 		<main class="wrapper about">
 			<Hero
 				title="About"
-				tagline="Thanks for stopping by. Read below to learn more about myself and my background."
+				tagline="Welcome to my site!"
 			>
 				<img
 					width="1553"
 					height="873"
-					src="/assets/at-work.jpg"
+					src="/assets/American-Flag.png"
 					alt="Jeanine White at work with a colleague"
 				/>
 			</Hero>
@@ -24,35 +24,53 @@ import Hero from '../components/Hero.astro';
 				<h2 class="section-title">Background</h2>
 				<div class="content">
 					<p>
-						Lorem ipsum dolor sit amet, <a href="https://astro.build/">Astro</a> makes people happy.
-						Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin nibh nisl condimentum
-						id venenatis a condimentum vitae. Dapibus ultrices in iaculis nunc. Arcu odio ut sem nulla
-						pharetra diam sit amet. Diam quis enim lobortis scelerisque fermentum dui faucibus in ornare.
+						My name is Kevin and I am currently a support engineer for a software company. I have a passion for technology and enjoy learning new things. In my spare time, I enjoy exercising, learning new skills and spending time with my family. I am also an excellent gardener and love growing my own food.
 					</p>
 					<p>
-						Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Eget gravida cum sociis
-						natoque penatibus. Cras fermentum odio eu feugiat pretium nibh. Proin nibh nisl
-						condimentum id venenatis. Porta nibh venenatis cras sed felis eget velit. Id diam vel
-						quam elementum pulvinar etiam non.
+						I've recently started learning how to code and I am enjoying it. I am currently learning HTML, CSS, and JavaScript. I am also learning how to use React,Next.js, and Astro. This site is actually built with Astro! 
 					</p>
 					<p>
-						Ultrices tincidunt arcu non sodales neque sodales ut. Sed enim ut sem viverra aliquet
-						eget sit amet. Lacus luctus accumsan tortor posuere ac ut consequat semper viverra.
-						Viverra accumsan in nisl nisi scelerisque eu ultrices. In massa tempor nec feugiat nisl
-						pretium fusce.
+						I have been building websites for a few years now. I started with WordPress on a busted up home server and have since moved on to create fun web projects for family and friends and just for fun, using every tool I have come accross. 
+					</p>
+					<p>
+						The majority of my interest is in design, and though it is enjoyable to code, I find it more enjoyable to be creative and solve problems. I am enrolled in Western Governor University for a B.S. in UI Experience Design. 
+					</p>
+					<p>
+						One of the coolest parts of learning to code is using new tools such as AI to help with tasks that I am not sure how to do. I am always looking for ways to improve my skills and I am excited to see what the future holds.
 					</p>
 				</div>
 			</section>
 			<section>
 				<h2 class="section-title">Education</h2>
 				<div class="content">
-					<p>Corporis voluptates tenetur laudantium.</p>
+					<ul>
+						<li>A.S. Computer Science - Indian River State College - 2020</li>
+						<li>A.A. General Studies - Indian River State College - 2019</li>
+						<li>B.S. UI Experience Design - Western Governor University - Currently Enrolled</li>
+						<li>Network Administration - ITT Technical Institute - 2015 - 2016 (They Closed The School)</li>
+						<li>Advanced Individual Training - United States Army - 2010 - 25Q</li>
+					</ul>
 				</div>
 			</section>
 			<section>
-				<h2 class="section-title">Skills</h2>
+				<h2 class="section-title">Certifications</h2>
 				<div class="content">
-					<p>officia unde omnis</p>
+					<h4>Hubspot</h4>
+					<ul>
+						<li>Service Hub - 2022</li>
+						<li>Sales Software - 2023</li>
+						<li>Marketing Software - 2023</li>
+						<li>RevOps - 2024</li>
+						<li>Inbound Marketing - 2023</li>
+						</ul>
+					<h4>Google</h4>
+					<ul>
+						<li>Google Analytics - 2022</li>
+					</ul>
+					<h4>Cisco</h4>
+					<ul>
+						<li>CCNA Routing and Switching - 2021</li>
+					</ul>
 				</div>
 			</section>
 		</main>
@@ -100,6 +118,18 @@ import Hero from '../components/Hero.astro';
 	.content :global(a:hover),
 	.content :global(a:focus) {
 		text-decoration-color: currentColor;
+	}
+
+	p {
+		margin-top: 1rem;
+	}
+
+	ul {
+		margin-top: 0.5rem;
+	}
+
+	h4 {
+		margin-top: 1rem;
 	}
 
 	@media (min-width: 50em) {

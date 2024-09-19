@@ -89,24 +89,37 @@ const contactInfo = {
 				</div>
 			</section>
 
-			<!-- Add the Bento component here -->
 			<section class="section with-background bg-variant">
 				<header class="section-header stack gap-2 lg:gap-4">
 					<h3>About Me</h3>
-					<p>Here's a quick overview of my skills, education, certifications, and contact information.</p>
+					<p>Here's a quick overview of my education, certifications, and contact information.</p>
 				</header>
 				<div class="gallery">
-					<Grid variant="small">
-						{
-							['Medium', 'BuzzFeed', 'The Next Web', 'awwwards.', 'TechCrunch'].map((brand) => (
-								<li class="mention-card">
-									<p>{brand}</p>
-								</li>
-							))
-						}
+					<Grid variant="large-offset">
+						<li class="mention-card">
+							<h4>Education</h4>
+							<ul>
+								{education.map((edu) => (
+									<li><strong>{edu.degree}</strong> - {edu.institution}, {edu.year}</li>
+								))}
+							</ul>
+						</li>
+						<li class="mention-card">
+							<h4>Certifications</h4>
+							<ul>
+								{certifications.map((cert) => (
+									<li><strong>{cert.name}</strong> - {cert.issuer}, {cert.year}</li>
+								))}
+							</ul>
+						</li>
+						<li class="mention-card">
+							<h4>Contact</h4>
+							<p><strong>Email:</strong> <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a></p>
+							<p><strong>LinkedIn:</strong> <a href={contactInfo.linkedin}>Profile</a></p>
+							<p><strong>GitHub:</strong> <a href={contactInfo.github}>Profile</a></p>
+						</li>
 					</Grid>
 				</div>
-					<!-- Remove the Bento component usage -->
 			</section>
 
 			<!-- You can remove or keep the Mentions section as needed -->
@@ -242,21 +255,51 @@ const contactInfo = {
 
 	.mention-card {
 		display: flex;
-		height: 7rem;
-		justify-content: center;
+		flex-direction: column;
+		height: auto;
+		justify-content: flex-start;
 		align-items: center;
-		text-align: center;
+		text-align: left;
 		border: 1px solid var(--gray-800);
 		border-radius: 1.5rem;
 		color: var(--gray-300);
 		background: var(--gradient-subtle);
 		box-shadow: var(--shadow-sm);
+		padding: 1rem;
+	}
+
+	.mention-card h4 {
+		font-size: var(--text-2xl);
+		color: var(--gray-0);
+		margin-bottom: 0.5rem;
+	}
+
+	.mention-card ul {
+		list-style-type: none;
+		padding: 2;
+		margin: 2;
+	}
+
+	.mention-card li {
+		margin-bottom: 0.25rem;
+		font-size: var(--text-md);
+		padding: 5px;
+	}
+
+	.mention-card a {
+		color: var(--accent-light);
+		text-decoration: none;
+	}
+
+	.mention-card a:hover {
+		text-decoration: underline;
+		color: var(--accent-dark);
 	}
 
 	@media (min-width: 50em) {
 		.mention-card {
 			border-radius: 1.5rem;
-			height: 9.5rem;
+			height: auto;
 		}
 	}
 
