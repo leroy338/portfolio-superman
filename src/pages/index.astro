@@ -55,13 +55,15 @@ const contactInfo = {
 					</div>
 				</Hero>
 
-				<img
-					alt="Kevin Jenkins smiling next to a statue in Savannah, GA"
-					width="480"
-					height="620"
-					src="/assets/Savannah.JPG"
-					class="hero-image"
-				/>
+				<div class="image-container">
+					<img
+						alt="Kevin Jenkins smiling next to a statue in Savannah, GA"
+						width="480"
+						height="620"
+						src="/assets/Savannah.JPG"
+						class="hero-image"
+					/>
+				</div>
 			</header>
 
 			<Skills />
@@ -70,8 +72,8 @@ const contactInfo = {
 		<main class="wrapper stack gap-20 lg:gap-48">
 			<section class="section with-background with-cta">
 				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Projects</h3>
-					<p>Check Out Some Of My Stuff</p>
+					<h3>Selected Work</h3>
+					<p>Take a look below at some of my featured work for clients from the past few years.</p>
 				</header>
 
 				<div class="gallery">
@@ -146,12 +148,18 @@ const contactInfo = {
 		display: none;
 	}
 
-	.hero img {
-		aspect-ratio: 5 / 4;
-		object-fit: cover;
-		object-position: top;
+	.image-container {
+		width: 100%;
 		border-radius: 1.5rem;
 		box-shadow: var(--shadow-md);
+		overflow: hidden; /* Ensure the border radius is applied */
+	}
+
+	.hero img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain; /* Ensure the entire image is displayed */
+		object-position: top;
 		transition: none; /* Remove any transition effects */
 	}
 
@@ -169,16 +177,15 @@ const contactInfo = {
 			gap: 0.5rem;
 		}
 
-		.hero img {
-			aspect-ratio: 3 / 4;
+		.image-container {
+			aspect-ratio: 3 / 4; /* Adjust aspect ratio for larger screens */
 			border-radius: 4.5rem;
-			object-fit: cover;
 		}
 	}
 
 	@media (max-width: 50em) {
-		.hero img {
-			height: 80vh; /* Make the image take 80% of the viewport height */
+		.image-container {
+			height: 100%; /* Make the image container take 80% of the viewport height */
 			width: auto; /* Maintain aspect ratio */
 		}
 	}
