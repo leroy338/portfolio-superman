@@ -31,3 +31,5 @@ Next I would like to add in a few more features. I think it would be cool to int
 [Weather Garden](https://weather-garden.vercel.app/)
 
 [Youtube Video](https://www.youtube.com/watch?v=UjeXpct3p7M)
+
+[Plant Daddy](https://plant-daddy.vercel.app/dashboard)
